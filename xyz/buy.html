@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buy SHAITANA Token</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    select {
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      width: 280px;
+      cursor: pointer;
+    }
+    option {
+      color: #000;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #e60000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Buy SHAITANA Token</h1>
+  <label for="exchange-select" style="display:block; margin-bottom: 10px; font-weight: bold;">Choose exchange:</label>
+  <select id="exchange-select">
+    <option value="" disabled selected>Select Exchange</option>
+    <option value="https://pancakeswap.finance/swap?outputCurrency=0x0000000000000000000000000000000000000000">PancakeSwap (Example)</option>
+    <!-- Добавляй новые биржи здесь -->
+  </select>
+
+  <a href="index.html" class="back-link">&larr; Back to Main Site</a>
+
+  <script>
+    const select = document.getElementById('exchange-select');
+    select.addEventListener('change', () => {
+      if (select.value) {
+        window.open(select.value, '_blank');
+        select.selectedIndex = 0; // сброс выбора
+      }
+    });
+  </script>
+</body>
+</html>
